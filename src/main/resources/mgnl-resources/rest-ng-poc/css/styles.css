@@ -1,0 +1,8 @@
+#wrapper {
+  font-family: Verdana, arial, sans-serif;
+  font-size: 13px;
+  color: black
+}
+#wrapper li {
+  list-style: none;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd">
+<module>
+  <name>rest-ng-poc</name>
+  <displayName>${project.name}</displayName>
+  <description>${project.description}</description>
+  <version>${project.version}</version>
+
+  <!-- Components App definition. -->
+  <!-- id of the components should be app-'appname'. 'appname' is the name of the app configured
+	   in the apps configuration repository of the admincentral. (config/module/apps/appname/name:appname) -->
+  <components>
+    <id>app-restNgEditor</id>
+  </components>
+
+  <components>
+    <id>app-restNgEditor-main</id>
+    <component>
+      <type>info.magnolia.poc.app.EditorMainSubApp</type>
+      <implementation>info.magnolia.poc.app.EditorMainSubApp</implementation>
+    </component>
+    <component>
+      <type>info.magnolia.poc.app.EditorPresenter</type>
+      <implementation>info.magnolia.poc.app.EditorPresenter</implementation>
+    </component>
+    <component>
+      <type>info.magnolia.poc.app.EditorView</type>
+      <implementation>info.magnolia.poc.app.EditorViewImpl</implementation>
+    </component>
+  </components>
+
+  <dependencies>
+    <dependency>
+      <name>ui-admincentral</name>
+      <version>5.2/*</version>
+    </dependency>
+  </dependencies>
+
+  <servlets>
+    <servlet>
+      <name>EditorServlet</name>
+      <class>info.magnolia.poc.servlet.EditorServlet</class>
+      <mappings>
+        <mapping>/.magnolia/poc-editor</mapping>
+        <mapping>/.magnolia/poc-editor/*</mapping>
+      </mappings>
+    </servlet>
+  </servlets>
+</module>
