@@ -1312,7 +1312,7 @@
           <sv:value>/nfl-poc/templates/pages/editor.ftl</sv:value>
         </sv:property>
         <sv:property sv:name="title" sv:type="String">
-          <sv:value>NFLEditor</sv:value>
+          <sv:value>Editor</sv:value>
         </sv:property>
         <sv:property sv:name="visible" sv:type="Boolean">
           <sv:value>false</sv:value>
